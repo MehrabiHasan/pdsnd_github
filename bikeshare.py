@@ -169,6 +169,7 @@ def display_data(df):
 
 
 def main():
+    """Main method for running through all the methods in the script."""
     while True:
         city, month, day = get_filters()
         df = load_data(city, month, day)
