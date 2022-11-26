@@ -1,7 +1,6 @@
 import time
 import pandas as pd
 import numpy as np
-
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
@@ -15,10 +14,13 @@ def get_filters():
         (str) month - name of the month to filter by, or "all" to apply no month filter
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
+    #For error checking we'll utilize if/else statements to error check users so that they don't make any inputs that could mess up the script
     print('Hello! Let\'s explore some US bikeshare data!')
     cities = ["chicago","washington","new york city"]
     months = ['all','january','febuary','march','april','may','june']
     days = ['all','monday','tuesday','wednesday','thursday','friday','saturday','sunday']
+    
+    #First while loop will have users keep inputting inputs for city until a valid choice is made
     while True: 
         city = input('Input a City').lower()
         if city not in cities:
@@ -26,7 +28,8 @@ def get_filters():
             continue
         else:
             break
-
+    
+    #Second while loop will have users keep inputting inputs for month until a valid choice is made
     while True: 
       month = input('Input a month').lower()
       if month not in months:
@@ -35,6 +38,7 @@ def get_filters():
       else:
             break
 
+    #Third while loop will have users keep inputting inputs for day until a valid choice is made
     while True: 
         day = input('Input a day').lower()
         if day not in days:
