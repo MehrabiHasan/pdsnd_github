@@ -46,7 +46,10 @@ def get_filters():
             continue
         else:
             break
-
+    
+    print(f"User Selected City: {city}\n")
+    print(f"User Selected Month: {month}\n")
+    print(f"User Selected Day: {day}\n")
     print('-'*40)
     return city, month, day
 
